@@ -1,0 +1,35 @@
+@charset "ISO-8859-1";
+
+body {
+	margin: 0px;
+	background: url("bg.png");
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 600px;
+}
+
+.content {
+	font-family: Helvetica;
+	font-size: 1.2em;
+	background: url('sign.png');
+	width: 620px;
+	min-height: 80%;
+	margin: -20px auto auto;
+}
+
+a, a:link, a:visited {
+	color: #21759B;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #09C;
+	text-decoration: underline;
+}
