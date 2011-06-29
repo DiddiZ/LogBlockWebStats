@@ -1,4 +1,5 @@
 <?php
+	error_reporting(0); // Toggle error reporting: 0 = off, E_ALL = on
 	$mysqlserver = 'localhost:3306';
 	$database = 'minecraft'; //The same as in LB config.
 	$tables = array('lb-main'); //List of all tables that should get summed up
