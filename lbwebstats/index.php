@@ -1,5 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <?php session_start();?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 	<head>
 		<title>LogBlock WebStats</title>
@@ -83,9 +83,9 @@
 		</div>
 		<img style="margin:0 auto; display:block;" src="signpillar.png">
 		<div style="position: fixed; right: 0; bottom: 0; font-size: 0.6em;">
-			HTML/PHP/CSS by <a href="diddiz.insane-architects.net">DiddiZ</a><br>
+			HTML/PHP/CSS by <a href="http://diddiz.insane-architects.net">DiddiZ</a><br>
 			LB-Banner by BattleViper<br>
-			Block pictures by <a href="minecraftwiki.net">minecraftwiki.net</a><br>
+			Block pictures by <a href="http://minecraftwiki.net">minecraftwiki.net</a><br>
 			Player skin script by Cadillaxx
 		</div>
 	</body>
