@@ -6,7 +6,7 @@
 		<link rel="icon" href="favicon.gif" type="image/x-gif">
 		<link rel="stylesheet" href="styles.css" type="text/css">
 		<meta name="author" content="DiddiZ">
-		<meta name="version" content="2">
+		<meta name="version" content="v1.1">
 		<meta http-equiv="Content-Type" content="text/html; charset=Cp1252">
 	</head>
 	<body>
