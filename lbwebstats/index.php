@@ -6,6 +6,7 @@
 		<link rel="icon" href="favicon.gif" type="image/x-gif">
 		<link rel="stylesheet" href="styles.css" type="text/css">
 		<meta name="author" content="DiddiZ">
+		<meta name="version" content="2">
 		<meta http-equiv="Content-Type" content="text/html; charset=Cp1252">
 	</head>
 	<body>
@@ -59,7 +60,16 @@
 				if ($i < count($tables) - 1)
 					$sql .= ' UNION ';
 			}
-	   		$sql .= ') AS t INNER JOIN `lb-players` USING (playerid) GROUP BY playerid ORDER BY SUM(created) + SUM(destroyed) DESC';
+			$where = '';
+			if (count($excludedPlayers) > 0) {
+				$where = 'WHERE ';
+				for ($i = 0; $i < count($excludedPlayers); $i++) {
+					$where .= "playername != '" . $excludedPlayers[$i] . "' ";
+					if ($i < count($excludedPlayers) - 1)
+						$where .= 'AND ';
+				}
+			}
+	   		$sql .= ') AS t INNER JOIN `lb-players` USING (playerid) ' . $where . 'GROUP BY playerid ORDER BY SUM(created) + SUM(destroyed) DESC';
 	   		$result = mysql_query($sql);
 			echo '<table><caption><h1>' . $msg['worldstatstitle'] . '</h1>'
 				. '<input type="button" value="' . $msg['alltime'] . '" onclick="location=\'?\'">'
