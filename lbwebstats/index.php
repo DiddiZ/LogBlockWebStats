@@ -14,9 +14,12 @@
 		<div class="content">
 <?php
 	include 'config.php';
-	$timeSinceLastCall = microtime(true) - $_SESSION['lastquery'];
-	if ($cooldown > 0 && $timeSinceLastCall < $cooldown)
-		echo '<br><p style="margin:10px;"><b>' . str_replace("{wait}", round($cooldown - $timeSinceLastCall, 2), str_replace("{cooldown}", $cooldown, $msg['spamprevention'])) . '<br><br><a href="?' . $_SERVER['QUERY_STRING'] . '">' . $msg['next'] . '</a></b></p><br>';
+	if ($debug) {
+		ini_set('display_errors', 1);
+		error_reporting(E_ALL);
+	}
+	if ($cooldown > 0 && isset($_SESSION['lastquery']) && microtime(true) - $_SESSION['lastquery'] < $cooldown)
+		echo '<br><p style="margin:10px;"><b>' . str_replace("{wait}", round($cooldown - (microtime(true) - $_SESSION['lastquery']), 2), str_replace("{cooldown}", $cooldown, $msg['spamprevention'])) . '<br><br><a href="?' . $_SERVER['QUERY_STRING'] . '">' . $msg['next'] . '</a></b></p><br>';
 	else {
 		$verbindung = mysql_connect($mysqlserver, $user, $password) or die("Can't connect to MySQL server!");
 		$db_select = @mysql_select_db($database);
@@ -40,6 +43,8 @@
 			}
 	   		$sql .= ') AS t GROUP BY type ORDER BY SUM(created) + SUM(destroyed) DESC';
 	   		$result = mysql_query($sql);
+	   		if ($debug)
+	   			echo mysql_error();
 			echo '<table><caption><h1>' . str_replace("{player}", $player, $msg['playerstatstitle']) . '</h1>'
 				. '<input type="button" value="' . $msg['alltime'] . '" onclick="location=\'?player=' . $player . '\'">'
 				. '<input type="button" value="' . $msg['lasthour'] . '" onclick="location=\'?player=' . $player . '&lastHour=1\'">'
@@ -47,7 +52,8 @@
 				. '<input type="button" value="' . $msg['lastweek'] . '" onclick="location=\'?player=' . $player . '&lastWeek=1\'">'
 				. '<input type="button" value="' . $msg['lastmonth'] . '" onclick="location=\'?player=' . $player . '&lastMonth=1\'"></caption>'
 				. '<tr><td></td><td><b>' . $msg['block'] . '</b></td><td><b>' . $msg['created'] . '</b></td><td><b>' . $msg['destroyed'] . '</b></td></tr>';
-			if (mysql_num_rows($result) > 0)
+				$counter = 0;
+				if (mysql_num_rows($result) > 0)
 				while ($row = mysql_fetch_row($result))
 					echo '<tr><td><b>' . ++$counter . '.</b></td><td><img src="blocks/' . $row[0] . '.png"> ' . ($mats[$row[0]] ? $mats[$row[0]] : $row[0]) . '</td><td>' . number_format($row[1], 0, $decimalseparator, $thousandsseparator) . '</td><td>' . number_format($row[2], 0, ',', '.') . '</td></tr>';
 			else
@@ -78,6 +84,7 @@
 				. '<input type="button" value="' . $msg['lastweek'] . '" onclick="location=\'?lastWeek=1\'">'
 				. '<input type="button" value="' . $msg['lastmonth'] . '" onclick="location=\'?lastMonth=1\'"></caption>'
 				. '<tr><td></td><td><b>' . $msg['player'] . '</b></td><td><b>' . $msg['created'] . '</b></td><td><b>' . $msg['destroyed'] . '</b></td></tr>';
+			$counter = 0;
 			if (mysql_num_rows($result) > 0)
 				while ($row = mysql_fetch_row($result))
 					echo '<tr><td><b>' . ++$counter . '.</b></td><td><a href="?player=' . $row[0] . '"><img src="player.php?' . $row[0] . '">' . ' ' . $row[0] . '</a></td><td>' . number_format($row[1], 0, $decimalseparator, $thousandsseparator) . '</td><td>' . number_format($row[2], 0, ',', '.') . '</td></tr>';
