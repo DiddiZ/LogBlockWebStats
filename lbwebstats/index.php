@@ -6,7 +6,7 @@
 		<link rel="icon" href="favicon.gif" type="image/x-gif">
 		<link rel="stylesheet" href="styles.css" type="text/css">
 		<meta name="author" content="DiddiZ">
-		<meta name="version" content="v1.1">
+		<meta name="version" content="v1.2">
 		<meta http-equiv="Content-Type" content="text/html; charset=Cp1252">
 	</head>
 	<body>
@@ -100,10 +100,10 @@
 		</div>
 	</body>
 	<script type="text/javascript">
-		function callResize() {           
+		function callResize() {
 			parent.resizeIframe(document.body.scrollHeight);
 		}
-	
+
 		window.onload = callResize;
 	</script>
 </html>
