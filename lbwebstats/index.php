@@ -55,7 +55,7 @@
 				$counter = 0;
 				if (mysql_num_rows($result) > 0)
 				while ($row = mysql_fetch_row($result))
-					echo '<tr><td><b>' . ++$counter . '.</b></td><td><img src="blocks/' . $row[0] . '.png"> ' . ($mats[$row[0]] ? $mats[$row[0]] : $row[0]) . '</td><td>' . number_format($row[1], 0, $decimalseparator, $thousandsseparator) . '</td><td>' . number_format($row[2], 0, ',', '.') . '</td></tr>';
+					echo '<tr><td><b>' . ++$counter . '.</b></td><td><img src="blocks/' . $row[0] . '.png"> ' . ($mats[$row[0]] ? $mats[$row[0]] : $row[0]) . '</td><td>' . number_format($row[1], 0, $decimalseparator, $thousandsseparator) . '</td><td>' . number_format($row[2], 0, $decimalseparator, $thousandsseparator) . '</td></tr>';
 			else
 				echo "<tr><td><i>$msg[none]</i></td></tr>";
 			echo '</table>';
