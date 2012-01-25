@@ -87,7 +87,7 @@
 			$counter = 0;
 			if (mysql_num_rows($result) > 0)
 				while ($row = mysql_fetch_row($result))
-					echo '<tr><td><b>' . ++$counter . '.</b></td><td><a href="?player=' . $row[0] . '"><img src="player.php?' . $row[0] . '">' . ' ' . $row[0] . '</a></td><td>' . number_format($row[1], 0, $decimalseparator, $thousandsseparator) . '</td><td>' . number_format($row[2], 0, ',', '.') . '</td></tr>';
+					echo '<tr><td><b>' . ++$counter . '.</b></td><td><a href="?player=' . $row[0] . '"><img src="player.php?' . $row[0] . '">' . ' ' . $row[0] . '</a></td><td>' . number_format($row[1], 0, $decimalseparator, $thousandsseparator) . '</td><td>' . number_format($row[2], 0, $decimalseparator, $thousandsseparator) . '</td></tr>';
 			else
 				echo "<tr><td><i>$msg[none]</i></td></tr>";
 			echo '</table>';
