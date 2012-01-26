@@ -13,7 +13,7 @@
 		'playerstatstitle' => 'Block Changes of {player}',
 		'worldstatstitle' => 'Block Changes per Player',
 		'next' => 'Next',
-		'spamprevention' => 'Your last database query was lesser than {cooldown} seconds ago. You still have to wait for {wait}s.'
+		'spamprevention' => 'Your last database query was less then {cooldown} seconds ago. You still have to wait for {wait}s.'
 	);
 	$thousandsseparator = ",";
 	$decimalseparator = ".";
