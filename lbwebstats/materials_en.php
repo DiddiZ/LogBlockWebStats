@@ -117,5 +117,12 @@
         113 => 'Nether Brick Fence',
         114 => 'Nether Brick Stairs',
         115 => 'Nether Wart',
+        116 => 'Enchantment Table',
+        117 => 'Brewing Stand',
+        118 => 'Cauldron',
+        119 => 'End Portal',
+        120 => 'End Portal Frame',
+        121 => 'End Stone',
+        122 => 'Dragon Egg',
 	);
 ?>
