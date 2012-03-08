@@ -124,5 +124,7 @@
         120 => 'End Portal Frame',
         121 => 'End Stone',
         122 => 'Dragon Egg',
+	123 => 'Redstone Lamp Off',
+	124 => 'Redstone Lamp On',
 	);
 ?>

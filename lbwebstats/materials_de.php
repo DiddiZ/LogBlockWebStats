@@ -117,5 +117,14 @@
         113 => 'Netherziegelzaun',
         114 => 'Netherziegeltreppe',
         115 => 'Netherwarze',
+	116 => 'Zaubertisch',
+	117 => 'Braustand',
+	118 => 'Kessel',
+	119 => 'Enderportal',
+	120 => 'Enderportal-Block',
+	121 => 'Endstein',
+	122 => 'Drachenei',
+	123 => 'Redstone-Lampe (aus)',
+	124 => 'Redstone-Lampe (an)',
 	);
 ?>
