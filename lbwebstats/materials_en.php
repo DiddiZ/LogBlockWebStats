@@ -124,7 +124,24 @@
         120 => 'End Portal Frame',
         121 => 'End Stone',
         122 => 'Dragon Egg',
-	123 => 'Redstone Lamp Off',
-	124 => 'Redstone Lamp On',
+		123 => 'Redstone Lamp Off',
+		124 => 'Redstone Lamp On',
+		125 => 'Double Wood Step',
+		126 => 'Wood Step',
+		127 => 'Cocoa Plant',
+		128 => 'Sandstone Stairs',
+		129 => 'Emerald Ore',
+		130 => 'Ender Chest',
+		131 => 'Tripwire Hook',
+		132 => 'Tripwire',
+		133 => 'Emerald Block',
+		134 => 'Spruce Wood Stairs',
+		135 => 'Birch Wood Stairs',
+		136 => 'Jungle Wood Stairs',
+	
+	
+	
+	
+	
 	);
 ?>
