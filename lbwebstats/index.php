@@ -77,6 +77,8 @@
 			}
 	   		$sql .= ') AS t INNER JOIN `lb-players` USING (playerid) ' . $where . 'GROUP BY playerid ORDER BY SUM(created) + SUM(destroyed) DESC';
 	   		$result = mysql_query($sql);
+	   		if ($debug)
+	   			echo mysql_error();
 			echo '<table><caption><h1>' . $msg['worldstatstitle'] . '</h1>'
 				. '<input type="button" value="' . $msg['alltime'] . '" onclick="location=\'?\'">'
 				. '<input type="button" value="' . $msg['lasthour'] . '" onclick="location=\'?lastHour=1\'">'
