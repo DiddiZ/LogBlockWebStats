@@ -138,10 +138,32 @@
 		134 => 'Spruce Wood Stairs',
 		135 => 'Birch Wood Stairs',
 		136 => 'Jungle Wood Stairs',
-	
-	
-	
-	
-	
+		137 => 'Command Block',
+		138 => 'Beacon',
+		139 => 'Cobblestone Wall',
+		140 => 'Flower Pot',
+		141 => 'Carrot',
+		142 => 'Potato',
+		143 => 'Wooden Button',
+		144 => 'Mob Head',
+		145 => 'Anvil',
+		146 => 'Trapped Chest',
+		147 => 'Weighted Pressure Plate (Light)',
+		148 => 'Weighted Pressure Plate (Heavy)',
+		149 => 'Redstone Comparator (inactive)',
+		150 => 'Redstone Comparator (active)',
+		151 => 'Daylight Sensor',
+		152 => 'Block of Redstone',
+		153 => 'Nether Quartz Ore',
+		154 => 'Hopper',
+		155 => 'Block of Quartz',
+		156 => 'Quartz Stairs',
+		157 => 'Activator Rail',
+		158 => 'Dropper',
+		159 => 'Stained Clay',
+		170 => 'Hay Bale',
+		171 => 'Carpet',
+		172 => 'Hardened Clay',
+		173 => 'Block of Coal'
 	);
 ?>
