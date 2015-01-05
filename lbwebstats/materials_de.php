@@ -164,6 +164,30 @@
 		170 => 'Strohballen',
 		171 => 'Teppich',
 		172 => 'Gebrannter Lehm',
-		173 => 'Kohleblock'
+		173 => 'Kohleblock',
+		174 => 'Packeis', //Update to 1.7 and 1.8
+		175 => 'Große Blumen',
+		176 => 'Banner',
+		177 => 'Wandbanner',
+		178 => 'Nachtlichtsensor',
+		179 => 'Roter Sandstein',
+		180 => 'Rote Sandsteintreppe',
+		181 => 'Doppelte Steinstufe',
+		182 => 'Steinstufe',
+		183 => 'Fichtenholzzauntor',
+		184 => 'Birkenholzzauntor',
+		185 => 'Tropenholzzauntor',
+		186 => 'Schwarzeichenholzzauntor',
+		187 => 'Akazienholzzauntor',
+		188 => 'Fichtenholzzaun',
+		189 => 'Birkenholzzaun',
+		190 => 'Tropenholzzaun',
+		191 => 'Schwarzeichenholzzaun',
+		192 => 'Akazienholzzaun',
+		193 => 'Fichtenholztür',
+		194 => 'Birkenholztür',
+		195 => 'Tropenholztür',
+		196 => 'Akazienholztür',
+		197 => 'Schwarzeichenholztür'
 	);
 ?>
